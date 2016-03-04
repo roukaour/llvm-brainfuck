@@ -6,7 +6,7 @@ SHIM_OBJECTS := shim.o
 
 CC := clang
 CXX := clang++
-CXXFLAGS := $(shell llvm-config --cppflags) -Wall -Werror -pedantic
+CXXFLAGS := $(shell llvm-config --cppflags) -std=c++11 -Wall -Werror -pedantic
 LDFLAGS := $(shell llvm-config --ldflags --libs core)
 
 all: $(PROGRAM) $(SHIM)
