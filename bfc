@@ -1,7 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 input.bf output.s"
+    echo
+    echo "To compile assembly output:"
+    echo "gcc -c -o output.o output.s"
+    echo "gcc -o output output.s shim.s"
     exit 1
 fi
 
