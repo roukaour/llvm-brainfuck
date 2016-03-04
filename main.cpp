@@ -48,7 +48,8 @@ int main() {
       MainModule, DataType, false /* constant */,
       GlobalVariable::InternalLinkage, Constant::getNullValue(DataType),
       DATA_NAME);
-  Value *DataPtr = Builder.CreateConstInBoundsGEP2_32(Data, 0, 0, PTR_NAME);
+  Value *DataPtr = Builder.CreateConstInBoundsGEP2_32(DataType, Data, 0, 0,
+      PTR_NAME);
 
   // Main function definition.
   FunctionType *MainFunctionType = FunctionType::get(
