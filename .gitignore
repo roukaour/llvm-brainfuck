@@ -2,3 +2,5 @@ llvm-brainfuck
 *.o
 *.a
 *.swp
+*.exe
+*.stackdump
